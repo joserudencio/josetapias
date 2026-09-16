@@ -78,16 +78,58 @@ font-weight:bold; margin-top:12px; font-size:22px;">
         🏦 Banco Pichincha
     </button>
 
-    <div id="datosPago" style="display: none; margin-top: 15px; padding: 20px;
-    background: #f5f7fa; border-radius: 10px; border: 2px solid #00529B;">
-        <h4 style="color: #00529B; margin: 0 0 15px 0;">Datos de Cuenta</h4>
+    <div style="text-align: center; margin: 35px 0 20px 0;">
+    <h2 style="color: #5D3A1A; font-size: 22px; font-weight: bold; margin-bottom: 20px;">
+        💳 Métodos de Pago
+    </h2>
+
+    <!-- BOTÓN BANCO PICHINCHA -->
+    <div style="margin-bottom: 15px;">
+        <button onclick="document.getElementById('pichincha').style.display='block'"
+        style="background: #00529B; color: white; border: none;
+        padding: 10px 22px; border-radius: 8px; font-size: 15px;
+        font-weight: bold; cursor: pointer; margin: 5px;">
+            🏦 Banco Pichincha
+        </button>
+    </div>
+
+    <div id="pichincha" style="display: none; margin: 10px auto 20px auto; padding: 20px;
+    background: #f5f7fa; border-radius: 10px; border: 2px solid #00529B; max-width: 400px;">
+        <h4 style="color: #00529B; margin: 0 0 15px 0;">Datos de Cuenta — Pichincha</h4>
         <p style="margin: 8px 0;"><strong>Titular:</strong> Tu Nombre Completo</p>
         <p style="margin: 8px 0;"><strong>Banco:</strong> Banco Pichincha</p>
         <p style="margin: 8px 0;"><strong>Tipo:</strong> Cuenta de Ahorros</p>
         <p style="margin: 8px 0;"><strong>Nº Cuenta:</strong> 1234567890</p>
         <p style="margin: 8px 0;"><strong>Cédula:</strong> 0123456789</p>
         
-        <a href="https://wa.me/593984273650?text=Hola,%20ya%20realicé%20el%20pago"
+        <a href="https://wa.me/593984273650?text=Hola,%20ya%20realicé%20el%20pago%20Pichincha"
+        style="display: inline-block; margin-top: 12px; background: #25D366;
+        color: white; padding: 8px 18px; border-radius: 6px;
+        text-decoration: none; font-weight: bold; font-size: 14px;">
+            ✅ Enviar Comprobante
+        </a>
+    </div>
+
+    <!-- BOTÓN BANCO GUAYAQUIL -->
+    <div>
+        <button onclick="document.getElementById('guayaquil').style.display='block'"
+        style="background: #E4002B; color: white; border: none;
+        padding: 10px 22px; border-radius: 8px; font-size: 15px;
+        font-weight: bold; cursor: pointer; margin: 5px;">
+            🏦 Banco Guayaquil
+        </button>
+    </div>
+
+    <div id="guayaquil" style="display: none; margin: 10px auto 20px auto; padding: 20px;
+    background: #fef2f2; border-radius: 10px; border: 2px solid #E4002B; max-width: 400px;">
+        <h4 style="color: #E4002B; margin: 0 0 15px 0;">Cuenta PeiGo — Banco Guayaquil</h4>
+        <p style="margin: 8px 0;"><strong>Apellidos y Nombres:</strong> ARACELLY MONSERRATE CHAVARRIA CEDEÑO</p>
+        <p style="margin: 8px 0;"><strong>Cédula:</strong> 0923069173</p>
+        <p style="margin: 8px 0;"><strong>Banco:</strong> Banco Guayaquil</p>
+        <p style="margin: 8px 0;"><strong>Tipo de Cuenta:</strong> Cuenta de Ahorros</p>
+        <p style="margin: 8px 0;"><strong>Nº de Cuenta:</strong> 0113850652</p>
+        
+        <a href="https://wa.me/593984273650?text=Hola,%20ya%20realicé%20el%20pago%20por%20Banco%20Guayaquil"
         style="display: inline-block; margin-top: 12px; background: #25D366;
         color: white; padding: 8px 18px; border-radius: 6px;
         text-decoration: none; font-weight: bold; font-size: 14px;">
