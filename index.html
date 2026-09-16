@@ -70,13 +70,29 @@ padding:15px 35px; border-radius:9px; text-decoration:none;
 font-weight:bold; margin-top:12px; font-size:22px;">
                                      🛒 Comprar
 </a>      
-    <div class="pago">
-        <h3>💳 Datos para Pago</h3>
-        <div class="cuenta">
-            <p><strong>Titular:</strong> Tu Nombre Completo</p>
-            <p><strong>Banco:</strong> Nombre del Banco</p>
-            <p><strong>Número de cuenta:</strong> 0123456789</p>
-        </div>
+    <div style="text-align: center; margin: 25px 0;">
+    <button onclick="document.getElementById('datosPago').style.display='block'"
+    style="background: #00529B; color: white; border: none;
+    padding: 10px 22px; border-radius: 8px; font-size: 15px;
+    font-weight: bold; cursor: pointer;">
+        🏦 Banco Pichincha
+    </button>
+
+    <div id="datosPago" style="display: none; margin-top: 15px; padding: 20px;
+    background: #f5f7fa; border-radius: 10px; border: 2px solid #00529B;">
+        <h4 style="color: #00529B; margin: 0 0 15px 0;">Datos de Cuenta</h4>
+        <p style="margin: 8px 0;"><strong>Titular:</strong> Tu Nombre Completo</p>
+        <p style="margin: 8px 0;"><strong>Banco:</strong> Banco Pichincha</p>
+        <p style="margin: 8px 0;"><strong>Tipo:</strong> Cuenta de Ahorros</p>
+        <p style="margin: 8px 0;"><strong>Nº Cuenta:</strong> 1234567890</p>
+        <p style="margin: 8px 0;"><strong>Cédula:</strong> 0123456789</p>
+        
+        <a href="https://wa.me/593984273650?text=Hola,%20ya%20realicé%20el%20pago"
+        style="display: inline-block; margin-top: 12px; background: #25D366;
+        color: white; padding: 8px 18px; border-radius: 6px;
+        text-decoration: none; font-weight: bold; font-size: 14px;">
+            ✅ Enviar Comprobante
+        </a>
     </div>
 </div>
 
