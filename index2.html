@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo — Más Detalles</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+      min-height: 100vh;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #25c248;
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
+    /* === CONTENEDOR DEL CATÁLOGO === */
+    .contenedor-catalogo {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    /* === IMAGEN QUE CAMBIA === */
+    .vista-imagen {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+    .vista-imagen img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    /* === BOTONES DE NAVEGACIÓN === */
+    .botones-navegacion {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .btn {
+      background: #25c248;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #1fa83c;
+    }
+    .btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .numero {
+      color: #555;
+      font-weight: bold;
+    }
+
+    /* === BOTÓN DE REGRESAR === */
+    .boton-regresar {
+      display: inline-block;
+      background: #3498db;
+      color: white;
+      padding: 14px 35px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+    }
+    .boton-regresar:hover {
+      background: #2980b9;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📋 Catálogo de Productos</h1>
+
+  <!-- === CATÁLOGO DESLIZANTE === -->
+  <div class="contenedor-catalogo">
+    <div class="vista-imagen">
+      <img id="imagen-actual" src="imagen1.jpg" alt="Producto">
+    </div>
+
+    <div class="botones-navegacion">
+      <button class="btn" id="btn-anterior" onclick="anterior()">⬅️ Anterior</button>
+      <span class="numero" id="contador">1 / 4</span>
+      <button class="btn" id="btn-siguiente" onclick="siguiente()">Siguiente ➡️</button>
+    </div>
+  </div>
+
+  <!-- === BOTÓN DE REGRESAR === -->
+  <a href="index.html" class="boton-regresar">⬅️ Volver a Inicio</a>
+
+
+  <!-- === SCRIPT QUE HACE FUNCIONAR EL DESLIZADO === -->
+  <script>
+    // AQUÍ PONES TUS IMÁGENES 👇
+    const imagenes = [
+      "imagen1.jpg",
+      "imagen2.jpg",
+      "imagen3.jpg",
+      "imagen4.jpg"
+      // Puedes agregar más así:
+      // "imagen5.jpg",
+      // "imagen6.jpg"
+    ];
+
+    let indiceActual = 0;
+    const img = document.getElementById("imagen-actual");
+    const contador = document.getElementById("contador");
+
+    function actualizarVista() {
+      img.src = imagenes[indiceActual];
+      contador.textContent = `${indiceActual + 1} / ${imagenes.length}`;
+      
+      // Bloquear botones en los extremos
+      document.getElementById("btn-anterior").disabled = indiceActual === 0;
+      document.getElementById("btn-siguiente").disabled = indiceActual === imagenes.length - 1;
+    }
+
+    function siguiente() {
+      if (indiceActual < imagenes.length - 1) {
+        indiceActual++;
+        actualizarVista();
+      }
+    }
+
+    function anterior() {
+      if (indiceActual > 0) {
+        indiceActual--;
+        actualizarVista();
+      }
+    }
+  </script>
+
+</body>
+</html>

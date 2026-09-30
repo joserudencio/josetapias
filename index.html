@@ -1,249 +1,291 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carpintería - Catálogo</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { background: #f5f0e6; color: #4a3728; line-height: 1.6; }
-        header { background: #8b5a2b; color: white; text-align: center; padding: 2rem; }
-        h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-        .subtitulo { font-size: 1.1rem; opacity: 0.9; }
-        .contenedor { max-width: 1200px; margin: 0 auto; padding: 2rem; }
-        h2 { text-align: center; color: #6b4423; margin-bottom: 2rem; font-size: 1.8rem; }
-        .catalogo { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .producto { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .producto h3 { color: #8b5a2b; margin-bottom: 0.5rem; }
-        .precio { font-size: 1.3rem; font-weight: bold; color: #2d6030; margin: 1rem 0; }
-        .pago { background: white; border-radius: 12px; padding: 2rem; margin: 3rem 0; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        .pago h3 { color: #2d6030; text-align: center; margin-bottom: 1.5rem; }
-        .cuenta { background: #f9f6f0; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #8b5a2b; }
-        .cuenta p { margin: 0.5rem 0; }
-        footer { background: #4a3728; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+
+    /* ======================
+       ESPACIO PARA TU IMAGEN DE FONDO
+       Cambia "rosaa.jpg" por tu enlace/nombre de imagen
+       ====================== */
+    body {
+      background: url("rompe.jpg") no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      padding: 25px 15px;
+    }
+
+    .capa-fondo {
+      background: rgba(0, 0, 0, 0.45);
+      padding: 35px 20px;
+      border-radius: 18px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 35px;
+      font-size: 30px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .contenedor-catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 22px;
+    }
+
+    .tarjeta-producto {
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+      transition: transform 0.3s ease;
+    }
+
+    .tarjeta-producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .imagen-producto {
+      height: 200px;
+      background: #e9e9e9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777777;
+      font-size: 15px;
+      border-bottom: 2px solid #ddd;
+    }
+
+    .contenido {
+      padding: 18px;
+    }
+
+    .nombre {
+      font-weight: bold;
+      font-size: 19px;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+
+    .descripcion {
+      font-size: 14px;
+      color: #555555;
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .precio {
+      font-size: 22px;
+      font-weight: bold;
+      color: #1e68d8;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <h1>🪵 CARPINTERIA TAPIAS</h1>
-    <p class="subtitulo">Muebles hechos a mano — Diseños personalizados diferentes 
-                                         modelos y accesibles a su bolsillo</p>
-</header>
-
-<div class="contenedor">
-    <h2>Nuestro Catálogo</h2>
-    
-    <div class="catalogo"> 
-         
-             <!-- Botón WhatsApp con mensaje -->
-<div style="text-align: center; margin: 30px 0;">
-  <a href="https://wa.me/5930984273650?text=Quiero%20comprar%20la%20repisa." target="_blank" style="
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 18px 35px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s ease;
-  " onmouseover="this.style.transform='scale(1.05)'" 
-     onmouseout="this.style.transform='scale(1)'">
-    👆 Presione aquí para enviar mensaje a WhatsApp 💬
-  </a>
-</div>          
-
-        <div class="producto">
-            <h3>📐 Repisa Flotante 3 medidas</h3>
-            <img src="repisa5.jpg" alt="Repisa flotante" style="width:100%; border-radius:8px; margin:10px 0;">
-           <p>Estilo minimalista. Medidas: 50 cm de largo × 14 cm de fondo.40 cm x14 cm.
-30 cm x 14 cm . Fijación invisible.</p>
-            <p class="precio">$25.00</p>
-            <a href="https://wa.me/593984273650?text=Quiero%20Repisa%20Flotante%203%20medidas" style="display:inline-block; background:#25D366; color:white; padding:9px 20px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:10px;">🛒 Comprar</a>    
-       </div> 
-      
-       <div class="producto">
-            <h3>📐 Repisa Flotante 3 cubos</h3>
-            <img src="repisa4.jpg" alt="Repisa flotante cuadrada" style="width:100%; border-radius:8px; margin:10px 0;">
-            <p>Estilo minimalista. Medidas: 30 cm de largo × 14 cm de fondo.25 cm x 14 cm . 20 cm x 14 cm. Fijación invisible.</p>
-            <p class="precio">$28.00</p>
-            <a href="https://wa.me/593984273650?text=Quiero%20Repisa%20Flotante%203%20cubos" style="display:inline-block; background:#25D366; color:white; padding:9px 20px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:10px;">🛒 Comprar</a>     
-       </div> 
- 
-     </div> 
-                
-      <!-- FILA DE PRODUCTOS HORIZONTAL -->
-<div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 15px; margin: 12px 0;">
-          
-    <!-- 1. ALCANCÍA -->
-    <div style="background: #fff; border-radius: 12px; padding: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); flex: 0 0 280px;">
-        <h3 style="color: #5D3A1A; margin: 0 0 8px 0; font-size: 16px;">💰 Alcancías Modernas</h3>
-        <img src="alcancia1.jpg" alt="Alcancía" style="width: 100%; height: 180px; object-fit: contain; margin: 10px 0;">
-        <p style="color: #444; margin: 6px 0; font-size: 14px; line-height: 1.4;">Medidas: 20 cm × 20 cm. Disponibles en todos los colores.</p>
-        <p style="font-size: 19px; font-weight: bold; color: #25D366; margin: 10px 0;">$20.00</p>
-        <a href="https://wa.me/593984273650?text=Quiero%20Alcancía%20Moderna" style="display:inline-block; background:#25D366; color:white; padding:9px 20px; border-radius:8px; text-decoration:none; font-weight:bold;">🛒 Comprar</a> 
-       </div>
-       
+    <div class="capa-fondo">
+     <!-- ========== ESPACIO PARA TU LOGO ========== -->
+     <div style="text-align: center; margin-bottom: 20px;">
+       <img src="logo2.jpg" alt="Logo Carpintería Andrea" style="max-width: 400px; width: 90%; height: auto;">
      </div>
+     <!-- ========================================== -->
+     <h1>🛠️ CARPINTERÍA ANDREA</h1>
+     <div class="contenedor-catalogo">
+
+      <!-- ========== PRODUCTO 1 ========== -->
+      <div class="tarjeta-producto">
+        <div class="imagen-producto"> 
+         <img src="1.jpg" alt="Repisas Rectas 3 Unidades" style="width:100%; height:100%; object-fit:cover;">
+  </div>
+        <div class="contenido">
+          <div class="nombre">REPISAS RECTAS 3 UNIDADES</div>
+          <div class="descripcion">medida 50 cm largo x 14 cm fondo , grosor 15 milimetros ..resistentes RH.. son finas flotantes , ideal para cuartos , cocina ,sala ,etc</div>
+          <div class="precio">$ 21.99</div>
+          <a href="https://wa.me/593984273650?text=Quiero%20comprar:%0A%0AREPISAS%20RECTAS%203%20UNIDADES" 
+        target="_blank" 
+        style="display:inline-block; background:#25c248; color:white; padding:10px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:15px; font-size:16px;">
+       Comprar
+     </a>      
+        </div>
+      </div>
+
+      <!-- ========== PRODUCTO 2 ========== -->
+      <div class="tarjeta-producto">
+        <div class="imagen-producto"> 
+         <img src="2.jpg" alt="Repisas Rectas 3 Unidades" style="width:100%; height:100%; object-fit:cover;">
+  </div>
+        <div class="contenido">
+          <div class="nombre">REPISAS CUADRADAS 3 UNIDADES</div>
+          <div class="descripcion">medidad 30x 30 cm x15 cm fondo .. 25 x25 cm x 15 cm fondo .. 20x 20 cm x 15 cm fondo, diferentes colores </div>
+          <div class="precio">$ 26.99</div>
+          <a href="https://wa.me/593984273650?text=Quiero%20comprar:%0A%0AREPISAS%20CUADRADAS%203%20UNIDADES" 
+        target="_blank" 
+        style="display:inline-block; background:#25c248; color:white; padding:10px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:15px; font-size:16px;">
+       Comprar
+     </a>      
+        </div>
+      </div>
+
+      <!-- ========== PRODUCTO 3 ========== -->
+      <div class="tarjeta-producto">
+        <div class="imagen-producto">
+         <img src="3.jpg" alt="Repisas Rectas 3 Unidades" style="width:100%; height:100%; object-fit:cover;">
+  </div>  
+       <div class="contenido">
+          <div class="nombre">REPISAS C , 3 UNIDADES</div>
+          <div class="descripcion">medida 50 cm largo x 15 cm fondo .... 35 cm largo x 15 cm fondo ... 40cm largo x 15 cm fondo .. incluyen pernos diferentes tonos disponibles</div>
+          <div class="precio">$ 25.99</div>
+          <a href="https://wa.me/593984273650?text=Quiero%20comprar:%0A%0AREPISAS%20C%203%20UNIDADES%0AMedidas:%2050cm%20x%2015cm%20/%2035cm%20x%2015cm%20/%2040cm%20x%2015cm%0AIncluyen%20pernos%20diferentes%0APrecio:%20%2425.99" 
+        target="_blank" 
+        style="display:inline-block; background:#25c248; color:white; padding:10px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:15px; font-size:16px;">
+       Comprar
+     </a> 
+        </div>
+      </div>
+
+      <!-- ========== PRODUCTO 4 ========== -->
+      <div class="tarjeta-producto">
+        <div class="imagen-producto">
+         <img src="4.jpg" alt="Repisas Rectas 3 Unidades" style="width:100%; height:100%; object-fit:cover;">
+  </div>
+       <div class="contenido">
+          <div class="nombre">VELADORES FLOTANTES</div>
+          <div class="descripcion">diferentes modelos y colores , toma captur y enviame al whatsapp q modelo y color deseas </div>
+          <div class="precio">$49.99 a $55.99..  dependiendo el modelo</div>
+         <a href="https://wa.me/593984273650?text=Quiero%20comprar:%0A%0AVELADORES%20FLOTANTES%0ADiferentes%20modelos%20y%20colores%0APrecio:%20%2449.99%20a%20%2455.99%20seg%C3%BAn%20modelo%0A%0APor%20favor%20indicar%20modelo%20y%20color%20deseado" 
+        target="_blank" 
+        style="display:inline-block; background:#25c248; color:white; padding:10px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:15px; font-size:16px;">
+       Comprar
+     </a>
+        </div>
+      </div>
+
+      <!-- ========== PRODUCTO 5 ========== -->
+      <div class="tarjeta-producto">
+        <div class="imagen-producto">
+         <img src="5.jpg" alt="Repisas Rectas 3 Unidades" style="width:100%; height:100%; object-fit:cover;">
+  </div>
+        <div class="contenido">
+          <div class="nombre">ESCRITORIOS</div>
+          <div class="descripcion">escritorio para oficina o estudiantes , colo blanco </div>
+          <div class="precio">$ dependiendo el modelo</div>
+          <a href="https://wa.me/593984273650?text=Quiero%20comprar:%0A%0AESCRITORIOS%0AEscritorio%20para%20oficina%20o%20estudiantes%20—%20color%20blanco%0APrecio%20seg%C3%BAn%20modelo%0A%0APor%20favor%20indicar%20modelo%20deseado" 
+        target="_blank" 
+        style="display:inline-block; background:#25c248; color:white; padding:10px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:15px; font-size:16px;">
+       Comprar
+     </a>
+        </div>
+      </div>
+
+      <!-- ========== PRODUCTO 6 ========== -->
+      <div class="tarjeta-producto">
+        <div class="imagen-producto">
+        <img src="6.jpg" alt="Repisas Rectas 3 Unidades" style="width:100%; height:100%; object-fit:cover;">
+  </div>
+         <div class="contenido">
+          <div class="nombre">VINERA MODERNA</div>
+          <div class="descripcion">Diferentes modelos y colores </div>
+          <div class="precio">$ 49.99</div>
+         <a href="https://wa.me/593984273650?text=Quiero%20comprar%20Vinera%20Moderna" 
+        target="_blank" 
+        style="display:inline-block; background:#25c248; color:white; padding:10px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:15px; font-size:16px;">
+       Comprar
+     </a>   
+        </div>
+      </div>
+
+      <!-- ========== PRODUCTO 7 ========== -->
+      <div class="tarjeta-producto">
+        <div class="imagen-producto">
+        <img src="7.jpg" alt="Repisas Rectas 3 Unidades" style="width:100%; height:100%; object-fit:cover;">
+  </div>
+        <div class="contenido">
+          <div class="nombre">PORTA CASCO</div>
+          <div class="descripcion">Color q desees ,bajo pedido ideal para cascos y llaves</div>
+          <div class="precio">$ 14,99</div>
+         <a href="https://wa.me/593984273650?text=Quiero%20comprar%20Porta%20Casco" 
+        target="_blank" 
+        style="display:inline-block; background:#25c248; color:white; padding:10px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:15px; font-size:16px;">
+       Comprar
+     </a>   
+        </div>
+      </div>
+
+      <!-- ========== PRODUCTO 8 ========== -->
+      <div class="tarjeta-producto">
+        <div class="imagen-producto">
+         <img src="8.jpg" alt="Repisas Rectas 3 Unidades" style="width:100%; height:100%; object-fit:cover;">
+  </div>
+        <div class="contenido">
+          <div class="nombre">ALCANCIAS DE MADERA MODERNA</div>
+          <div class="descripcion">medida 20 cm x 20 cm ..color que desees </div>
+          <div class="precio">$ 14,99</div>
+         <a href="https://wa.me/593984273650?text=Quiero%20comprar%20Alcanc%C3%ADa%20Moderna" 
+        target="_blank" 
+        style="display:inline-block; background:#25c248; color:white; padding:10px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:15px; font-size:16px;">
+       Comprar
+     </a>  
+        </div>
+      </div>
+
+      <!-- ========== PRODUCTO 9 ========== -->
+      <div class="tarjeta-producto">
+        <div class="imagen-producto">
+        <img src="9.jpg" alt="Repisas Rectas 3 Unidades" style="width:100%; height:100%; object-fit:cover;">
+  </div>
+        <div class="contenido">
+          <div class="nombre">REPISA CON BORDE 3 UNIDADES</div>
+          <div class="descripcion">50 cm largo x 14 cm fondo .. ideal para tu hogar</div>
+          <div class="precio">$ 24,99</div>
+          <a href="https://wa.me/593984273650?text=Quiero%20comprar%20Repisa%20con%20Borde" 
+        target="_blank" 
+        style="display:inline-block; background:#25c248; color:white; padding:10px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:15px; font-size:16px;">
+       Comprar
+     </a>
+        </div>
+      </div>
+
+   
+      <!-- ========== VIDEO DE INSTALACIÓN ========== -->
+<div style="background:#ffffff; padding:15px 25px; border-radius:10px; display:inline-block; margin:20px 0; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+  <h2 style="color:green; margin:0; font-size:22px; text-transform:uppercase;">
+    ESTE ES EL VIDEO DE INSTALACIÓN 👇👇
+  </h2>
+</div>
+  
+  <iframe width="100%" height="420" 
+    src="https://www.youtube.com/embed/WSGw-ypgSLU" 
+    title="Instalación de Repisas — Video Explicado"
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen
+    style="border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
+  </iframe>
+</div>
 
     </div>
-                            <!-- PRODUCTO: Repisas Rectas Flotantes -->
-<div style="border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px; max-width: 350px; margin: 15px; background: #fff; box-shadow: 0 3px 8px rgba(0,0,0,0.08); display: inline-block; vertical-align: top;">
-
-  <!-- Imagen del producto -->
-  <img src="imagenrecta.jpg" 
-       alt="Repisas rectas flotantes 50 cm" 
-       style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px;">
-
-  <!-- Nombre del producto -->
-  <h3 style="color: #3E2723; margin: 0 0 10px 0; font-size: 18px;">Repisas Rectas Flotantes</h3>
-
-  <!-- Descripción del producto -->
-  <p style="color: #555; font-size: 14px; margin: 5px 0;"><strong>Medidas:</strong> 50 cm de largo × 14 cm de fondo</p>
-  <p style="color: #555; font-size: 14px; margin: 5px 0;"><strong>Grosor:</strong> 15 mm</p>
-  <p style="color: #555; font-size: 14px; margin: 5px 0;"><strong>Estilo:</strong> Finas flotantes</p>
-  <p style="color: #555; font-size: 14px; margin: 5px 0; min-height: 40px;">Repisas rectas flotantes finas, ideales para sala, dormitorio, cocina u oficina. Diseño minimalista y moderno.</p>
-
-  <!-- Precio -->
-  <p style="color: #27ae60; font-size: 22px; font-weight: bold; margin: 10px 0;">$19.00</p>
-
-  <!-- Botón de compra por WhatsApp -->
-  <a href="https://wa.me/5930984273650?text=Hola! Quiero comprar las Repisas Rectas Flotantes por $19.00" 
-     target="_blank"
-     style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 16px; margin-top: 10px;">
-    🟢 Comprar por WhatsApp
-  </a>
-
-</div>
-                       
-                  <!-- PRODUCTO: Mesa de Noche -->
-<div style="border: 1px solid #e0e0e0; border-radius: 12px; padding: 20px; max-width: 350px; margin: 15px; background: #fff; box-shadow: 0 3px 8px rgba(0,0,0,0.08); display: inline-block; vertical-align: top;">
-
-  <!-- 2 IMÁGENES: mesa 1 y mesa 2 -->
-  <div style="display: flex; gap: 8px; margin-bottom: 15px;">
-    <img src="mesa1.jpg" 
-         alt="Mesa de noche - vista principal" 
-         style="width: 50%; border-radius: 6px; object-fit: cover;">
-    
-    <img src="mesa2.jpg" 
-         alt="Mesa de noche - vista lateral" 
-         style="width: 50%; border-radius: 6px; object-fit: cover;">
   </div>
 
-  <!-- Nombre y descripción -->
-  <h3 style="color: #333; margin: 0 0 10px 0; font-size: 18px;">Mesa de Noche</h3>
-  <p style="color: #555; font-size: 14px; margin: 5px 0;"><strong>Medidas:</strong> 50 cm de ancho × 35 cm de fondo × 50 cm de alto</p>
-  <p style="color: #555; font-size: 14px; margin: 5px 0;"><strong>Material:</strong> Madera RH resistente</p>
-  <p style="color: #555; font-size: 14px; margin: 5px 0;">Diseño práctico y elegante, fabricada con madera RH de alta resistencia. Ideal para tu habitación.</p>
-
-  <!-- Precio -->
-  <p style="color: #27ae60; font-size: 22px; font-weight: bold; margin: 10px 0;">$55.00</p>
-
-  <!-- Botón de compra -->
-  <a href="https://wa.me/5930984273650?text=Hola! Quiero comprar la Mesa de Noche por $55.00" 
-     target="_blank"
-     style="display: block; background: #25D366; color: white; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold;">
-    🟢 Comprar por WhatsApp
-  </a>
-
-</div>
-                                
-                                         
-                      <div style="text-align: center; margin: 20px 0;">
-    <img src="freddy-07.gif" alt="Animación" style="max-width: 320px; border-radius: 12px;">
-</div>
-                 <div style="display: none;">
-    <iframe 
-        src="https://www.youtube.com/embed/mcGBVy3-W4s?autoplay=1&mute=0&loop=1&playlist=mcGBVy3-W4s&rel=0"
-        allow="autoplay; encrypted-media"
-        frameborder="0"
-    ></iframe>
-</div>   
-                  
-                     
-                 <!-- BOTÓN VIDEO DE INSTALACIÓN -->
-<div style="text-align: center; margin: 30px 0;">
-    <a href="https://youtube.com/shorts/WSGw-ypgSLU?si=eV4dzSlRT0ja48ya" target="_blank" style="display: inline-flex; align-items: center; gap: 15px; background: #d32f2f; color: white; padding: 18px 45px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 22px; box-shadow: 0 4px 12px rgba(211, 47, 47, 0.4);">
-        ✅ ✅presiona aqui para ver
-              👇👇
-    
-       VIDEO DE INSTALACIÓN COMPLETO AQUÍ ✅ ✅
-    </a>
-</div>
-       
-
-
-
-    <div style="text-align: center; margin: 35px 0 20px 0;">
-    <h2 style="color: #5D3A1A; font-size: 22px; font-weight: bold; margin-bottom: 20px;">
-        💳 Métodos de Pago
-    </h2>
-
-    <!-- BOTÓN BANCO PICHINCHA -->
-    <div style="margin-bottom: 15px;">
-        <button onclick="document.getElementById('pichincha').style.display='block'"
-        style="background: #00529B; color: white; border: none;
-        padding: 10px 22px; border-radius: 8px; font-size: 15px;
-        font-weight: bold; cursor: pointer; margin: 5px;">
-            🏦 Banco Pichincha
-        </button>
-    </div>
-
-    <div id="pichincha" style="display: none; margin: 10px auto 20px auto; padding: 20px;
-    background: #f5f7fa; border-radius: 10px; border: 2px solid #00529B; max-width: 400px;">
-        <h4 style="color: #00529B; margin: 0 0 15px 0;">Datos de Cuenta — Pichincha</h4>
-        <p style="margin: 8px 0;"><strong>Titular:</strong> jose rudencio tapias gomez</p>
-        <p style="margin: 8px 0;"><strong>Banco:</strong> Banco Pichincha</p>
-        <p style="margin: 8px 0;"><strong>Tipo:</strong> Cuenta de Ahorros</p>
-        <p style="margin: 8px 0;"><strong>Nº Cuenta:</strong> 000000000</p>
-        <p style="margin: 8px 0;"><strong>Cédula:</strong> 000000000000</p>
-        
-        <a href="https://wa.me/593984273650?text=Hola,%20ya%20realicé%20el%20pago%20Pichincha"
-        style="display: inline-block; margin-top: 12px; background: #25D366;
-        color: white; padding: 8px 18px; border-radius: 6px;
-        text-decoration: none; font-weight: bold; font-size: 14px;">
-            ✅ Enviar Comprobante
-        </a>
-    </div>
-
-    <!-- BOTÓN BANCO GUAYAQUIL -->
-    <div>
-        <button onclick="document.getElementById('guayaquil').style.display='block'"
-        style="background: #E4002B; color: white; border: none;
-        padding: 10px 22px; border-radius: 8px; font-size: 15px;
-        font-weight: bold; cursor: pointer; margin: 5px;">
-            🏦 Banco Guayaquil
-        </button>
-    </div>
-
-    <div id="guayaquil" style="display: none; margin: 10px auto 20px auto; padding: 20px;
-    background: #fef2f2; border-radius: 10px; border: 2px solid #E4002B; max-width: 400px;">
-        <h4 style="color: #E4002B; margin: 0 0 15px 0;">Cuenta PeiGo — Banco Guayaquil</h4>
-        <p style="margin: 8px 0;"><strong>Apellidos y Nombres:</strong> ARACELLY MONSERRATE CHAVARRIA CEDEÑO</p>
-        <p style="margin: 8px 0;"><strong>Cédula:</strong> 0923069173</p>
-        <p style="margin: 8px 0;"><strong>Banco:</strong> Banco Guayaquil</p>
-        <p style="margin: 8px 0;"><strong>Tipo de Cuenta:</strong> Cuenta de Ahorros</p>
-        <p style="margin: 8px 0;"><strong>Nº de Cuenta:</strong> 0113850652</p>
-        
-        <a href="https://wa.me/593984273650?text=Hola,%20ya%20realicé%20el%20pago%20por%20Banco%20Guayaquil"
-        style="display: inline-block; margin-top: 12px; background: #25D366;
-        color: white; padding: 8px 18px; border-radius: 6px;
-        text-decoration: none; font-weight: bold; font-size: 14px;">
-            ✅ Enviar Comprobante
-        </a>
-    </div>
-</div>
-
-<footer>
-    <p>📍 Guayaquil, Ecuador</p>
-    <p>📞 WhatsApp: +593 0984273650</p>
-    <p style="margin-top: 1rem; font-size: 0.9rem;">© 2026 Carpintería</p>
-</footer>
-
+   <a href="index2.html" style="
+     display: inline-block;
+     background: #25c248;
+     color: white;
+     padding: 15px 40px;
+     border-radius: 10px;
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 18px;
+     box-shadow: 0 4px 12px rgba(37,194,72,0.3);
+   ">
+     ✅ Más Detalles
+  
 </body>
 </html>
 
