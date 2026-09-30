@@ -1,0 +1,211 @@
+<!-- ===== SECCIÓN TESTIMONIOS ===== -->
+<div id="testimonios" style="
+  background: #fff;
+  padding: 35px 20px;
+  margin: 30px 0;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+">
+
+  <h2 style="text-align: center; color: #2D3748; margin-bottom: 30px; font-size: 24px;">
+    ⭐ Lo que dicen nuestros clientes
+  </h2>
+
+  <!-- ===== TESTIMONIOS YA RECIBIDOS ===== -->
+
+  <div style="background: #FEF9E7; padding: 22px; margin: 12px 0; border-radius: 10px; border-left: 4px solid #F59E0B;">
+    <div style="color: #F59E0B; font-size: 20px; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
+    <p style="color: #374151; margin: 10px 0; font-style: italic; font-size: 15px;">
+      "Excelente calidad, muy bien terminado y cumplieron con el tiempo de entrega. 100% recomendado."
+    </p>
+    <strong style="color: #1F2937;">— María G. 🇪🇨</strong>
+  </div>
+
+  <div style="background: #FEF9E7; padding: 22px; margin: 12px 0; border-radius: 10px; border-left: 4px solid #F59E0B;">
+    <div style="color: #F59E0B; font-size: 20px; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
+    <p style="color: #374151; margin: 10px 0; font-style: italic; font-size: 15px;">
+      "Los productos quedaron tal cual los pedí. Muy amables y atentos en todo el proceso. Volveré a comprar."
+    </p>
+    <strong style="color: #1F2937;">— José L. 🇪🇨</strong>
+  </div>
+
+  <div style="background: #FEF9E7; padding: 22px; margin: 12px 0; border-radius: 10px; border-left: 4px solid #F59E0B;">
+    <div style="color: #F59E0B; font-size: 20px; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
+    <p style="color: #374151; margin: 10px 0; font-style: italic; font-size: 15px;">
+      "Muy buenos acabados, madera resistente. Ya es mi segunda compra y todo perfecto como la primera vez."
+    </p>
+    <strong style="color: #1F2937;">— Andrea R. 🇪🇨</strong>
+  </div>
+
+  <div style="background: #FEF9E7; padding: 22px; margin: 12px 0; border-radius: 10px; border-left: 4px solid #10B981;">
+    <div style="color: #F59E0B; font-size: 20px; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
+    <p style="color: #374151; margin: 10px 0; font-style: italic; font-size: 15px;">
+      "Entregaron antes de la fecha acordada. La repisa se ve hermosa y muy sólida. Gracias por todo."
+    </p>
+    <strong style="color: #1F2937;">— Carmen S. 🇪🇨</strong>
+  </div>
+
+  <div style="background: #FEF9E7; padding: 22px; margin: 12px 0; border-radius: 10px; border-left: 4px solid #10B981;">
+    <div style="color: #F59E0B; font-size: 20px; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
+    <p style="color: #374151; margin: 10px 0; font-style: italic; font-size: 15px;">
+      "Excelente trato, me ayudaron a elegir las medidas exactas. El resultado superó mis expectativas."
+    </p>
+    <strong style="color: #1F2937;">— Luis M. 🇪🇨</strong>
+  </div>
+
+  <div style="background: #FEF9E7; padding: 22px; margin: 12px 0; border-radius: 10px; border-left: 4px solid #3B82F6;">
+    <div style="color: #F59E0B; font-size: 20px; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
+    <p style="color: #374151; margin: 10px 0; font-style: italic; font-size: 15px;">
+      "Mi vinera quedó espectacular, justo como la imaginé. Muy profesionales y detallistas."
+    </p>
+    <strong style="color: #1F2937;">— Roberto C. 🇪🇨</strong>
+  </div>
+
+  <!-- ===== FORMULARIO: DEJAR TU TESTIMONIO ===== -->
+  <div style="
+    background: #F0FDF4;
+    padding: 25px;
+    margin-top: 35px;
+    border-radius: 12px;
+    border: 2px solid #25D366;
+  ">
+    <h3 style="text-align: center; color: #166534; margin-bottom: 20px;">
+      ✍️ Deja tu comentario y califícanos
+    </h3>
+
+    <form id="form-testimonio" style="max-width: 500px; margin: 0 auto;">
+      <!-- Calificación con estrellas -->
+      <label style="font-weight: bold; color: #333; display: block; margin-bottom: 10px;">
+        ⭐ Tu calificación:
+      </label>
+      <div id="estrellas-calif" style="font-size: 32px; cursor: pointer; margin-bottom: 20px;">
+        <span data-valor="1">⭐</span>
+        <span data-valor="2">⭐</span>
+        <span data-valor="3">⭐</span>
+        <span data-valor="4">⭐</span>
+        <span data-valor="5">⭐</span>
+      </div>
+      <input type="hidden" id="calificacion" value="">
+
+      <!-- Tu nombre -->
+      <label style="font-weight: bold; color: #333; display: block; margin: 15px 0 5px;">
+        Tu nombre:
+      </label>
+      <input type="text" id="nombre-cli" placeholder="Escribe tu nombre..." style="
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 15px;
+      " required>
+
+      <!-- Tu comentario -->
+      <label style="font-weight: bold; color: #333; display: block; margin: 15px 0 5px;">
+        Tu comentario:
+      </label>
+      <textarea id="comentario-cli" rows="4" placeholder="Cuéntanos tu experiencia..." style="
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 15px;
+        resize: vertical;
+      " required></textarea>
+
+      <!-- Botón Enviar -->
+      <button type="submit" style="
+        background: #25D366;
+        color: white;
+        padding: 13px 30px;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 20px;
+        width: 100%;
+      ">
+        ✅ Enviar mi comentario
+      </button>
+    </form>
+
+    <!-- Mensaje de confirmación -->
+    <p id="mensaje-confirm" style="
+      display: none;
+      text-align: center;
+      color: #166534;
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 16px;
+    ">
+      ✅ ¡Gracias por tu comentario! Lo revisaremos y lo publicaremos pronto.
+    </p>
+  </div>
+
+</div>
+
+<!-- === CÓDIGO QUE HACE FUNCIONAR LAS ESTRELLAS === -->
+<script>
+// Seleccionar estrellas
+const estrellas = document.querySelectorAll('#estrellas-calif span');
+const calificacion = document.getElementById('calificacion');
+
+estrellas.forEach((estrella, indice) => {
+  estrella.addEventListener('mouseover', () => {
+    for (let i = 0; i <= indice; i++) {
+      estrellas[i].style.opacity = '1';
+      estrellas[i].style.transform = 'scale(1.2)';
+    }
+    for (let i = indice + 1; i < 5; i++) {
+      estrellas[i].style.opacity = '0.4';
+      estrellas[i].style.transform = 'scale(1)';
+    }
+  });
+
+  estrella.addEventListener('click', () => {
+    calificacion.value = estrella.dataset.valor;
+    // Dejar marcadas
+    estrellas.forEach((e, i) => {
+      e.style.opacity = i <= indice ? '1' : '0.4';
+    });
+  });
+});
+
+// Enviar formulario
+document.getElementById('form-testimonio').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const nombre = document.getElementById('nombre-cli').value;
+  const comentario = document.getElementById('comentario-cli').value;
+  const estrellas = '⭐'.repeat(parseInt(calificacion.value) || 5);
+
+  // Opción A: Abrir WhatsApp con el mensaje listo
+  const texto = encodeURIComponent(
+    `NUEVO TESTIMONIO\n\nNombre: ${nombre}\nCalificación: ${estrellas}\nComentario: ${comentario}`
+  );
+  window.open(`https://wa.me/593968591065?text=${texto}`, '_blank');
+
+  // Mostrar mensaje de confirmación
+  document.getElementById('mensaje-confirm').style.display = 'block';
+  this.reset();
+  calificacion.value = '';
+  estrellas.forEach(e => e.style.opacity = '1');
+});
+</script>
+
+<!-- TODO TERMINA AQUÍ → PEGA DEBAJO ESTO: -->
+
+<!-- Botón Volver a Inicio -->
+<div style="text-align: center; margin-top: 30px;">
+  <a href="index.html" style="
+    display: inline-block;
+    background: #6B7280;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+  ">
+    ← Volver a Inicio
+  </a>
+</div>
